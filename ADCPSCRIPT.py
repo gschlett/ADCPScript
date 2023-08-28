@@ -20,7 +20,7 @@ df.drop_duplicates(subset = ['GGA Latitude (491)', 'GGA Longitude (493)'],
 
 df.rename(columns={'Total Width (Ref: GGA) (244)' : 'Distance', 'GGA Latitude (491)': 'Latitude', 
                    'GGA Longitude (493)': 'Longitude', 'River Depth (484)': 'Depth'}, 
-          errors="raise", inplace = True) ### Have to put inplace to actually put it in dataframe #
+          errors="raise", inplace = True) 
 
 # Removing rows without depth #
 df = df[df.Depth > 0]
